@@ -5,7 +5,7 @@ public class BirdCode : MonoBehaviour
   public Rigidbody2D myRigidBody2D;
   private float flapForce = 20;
   public LogicScript logic;
-  private bool isGameOver = false;
+  public bool isGameOver = false;
 
   void Update()
   {
@@ -19,13 +19,13 @@ public class BirdCode : MonoBehaviour
 
   void OnCollisionEnter2D(Collision2D collisionInfo)
   {
-    logic.gameOver();
     isGameOver = true;
+    logic.gameOver();
   }
 
   void OnBecameInvisible()
   {
-    logic.gameOver();
     isGameOver = true;
+    logic.gameOver();
   }
 }
