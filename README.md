@@ -24,4 +24,6 @@ In order to learn Unity 2D game development, I created my first-ever game, Flapp
 
 - **Spawning:** I also understood how to spawn elements dynamically in the game. The pipes are spawned before entering the screen and then destroyed after leaving the viewing area on the screen. I also understood how dynamically spawned pre-fabs are non-existing statically in the game, and to import other files in them, we have to use different syntax in the `Start( ... )` method of C#.
 
+- **Time.DeltaTime:** I also understood how different computing machines can have different refresh rates, resulting in the scnes moving faster / slower on different devices. To solve this issue, I understood the usage of `Time.DeltaTime`, as it gives us the lifespan of each frames on that machine. On a faster computer, this value will be smaller than on a slower computer, as more frames mean shorter lifespan of each of the frames in any given second, resulting in a smaller overall value whith which this value is being multiplied. Hence, I was successfully able to make my game frame rate-independent.
+
 Overall, it was an amazing learning experience. I could not leave in front of my laptop the entire time! I hope to create more games with even more amazing features, like sound effects, collision effects, animations, etc.
