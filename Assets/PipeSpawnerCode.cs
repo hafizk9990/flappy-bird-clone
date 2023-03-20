@@ -1,21 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PipeSpawnerCode : MonoBehaviour
 {
-  public GameObject pipePreFab; // Pre-fabricated asset, pipe
-  private float pipeSpawnTime = 1.5f;
-  private float timer = 0;
-  private float offset = 8;
+  public GameObject pipePreFab;
 
-  // Start is called before the first frame update
+  /*
+    A pre-fabricated asset was once a standalone game object, 
+    with nested objects. We imported it as an asset in the game, 
+    and then attached it with another game object in Unity engine
+    using the code above.
+  */
+
+  private float pipeSpawnTime = 1.75f; // "f" converts the number to a float from double.
+  private float timer = 0;
+  private float offset = 9;
+
   void Start()
   {
     instantiatePipe();
   }
 
-  // Update is called once per frame
   void Update()
   {
     spawnMorePipePairs();
@@ -38,7 +42,6 @@ public class PipeSpawnerCode : MonoBehaviour
   {
     float minYOffset = transform.position.y - offset;
     float maxYOffset = transform.position.y + offset;
-
     Instantiate(pipePreFab, new Vector3(transform.position.x, Random.Range(minYOffset, maxYOffset), 0), transform.rotation);
   }
 }

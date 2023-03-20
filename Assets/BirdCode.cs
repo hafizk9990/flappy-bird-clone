@@ -1,16 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BirdCode : MonoBehaviour
 {
   public Rigidbody2D myRigidBody2D;
-  private float flapForce = 18;
+  private float flapForce = 20;
   public LogicScript logic;
   private bool isGameOver = false;
-
-
-  // Frame Events:
 
   void Update()
   {

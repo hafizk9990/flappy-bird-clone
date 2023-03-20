@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MiddleScript : MonoBehaviour
@@ -15,6 +13,10 @@ public class MiddleScript : MonoBehaviour
   {
     if (collision.gameObject.layer == 3)
     {
+      /*
+        Layer 3 is the bird in Unity.
+        Layer 6 are the wings. When they pass, no score is updated.
+      */
       logic.updateScore(1);
     }
   }
