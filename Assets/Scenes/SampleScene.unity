@@ -735,7 +735,7 @@ GameObject:
   - component: {fileID: 1572141435}
   m_Layer: 3
   m_Name: Bird
-  m_TagString: Untagged
+  m_TagString: Bird
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -859,6 +859,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myRigidBody2D: {fileID: 1572141433}
   logic: {fileID: 1625922052}
+  isGameOver: 0
 --- !u!1 &1620356628
 GameObject:
   m_ObjectHideFlags: 0

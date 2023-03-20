@@ -3,6 +3,7 @@ using UnityEngine;
 public class PipeSpawnerCode : MonoBehaviour
 {
   public GameObject pipePreFab;
+  public BirdCode bird;
 
   /*
     A pre-fabricated asset was once a standalone game object, 
@@ -17,12 +18,16 @@ public class PipeSpawnerCode : MonoBehaviour
 
   void Start()
   {
+    bird = GameObject.FindGameObjectWithTag("Bird").GetComponent<BirdCode>();
     instantiatePipe();
   }
 
   void Update()
   {
-    spawnMorePipePairs();
+    if (!bird.isGameOver)
+    {
+      spawnMorePipePairs();
+    }
   }
 
   void spawnMorePipePairs()
